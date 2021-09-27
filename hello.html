@@ -17,13 +17,13 @@
   <h1> Hello World!</h1>
   <p> This is my very first webpage built using GitHub and ATOM! </p>
 <!doctype html>
-<title>CSS Grid Template 2</title>
+<title>Guitar Homepage</title>
 <style>
 body { 
   display: grid;
   grid-template-areas: 
     "header header header"
-    "nav article ads"
+    "components article ads"
     "footer footer footer";
   grid-template-rows: 80px 1fr 70px;  
   grid-template-columns: 20% 1fr 15%;
@@ -34,7 +34,7 @@ body {
   }  
 header, footer, article, nav, div {
   padding: 1.2em;
-  background: red;
+  background: #F79580;
   }
 #pageHeader {
   grid-area: header;
@@ -45,20 +45,20 @@ header, footer, article, nav, div {
 #mainArticle { 
   grid-area: article;      
   }
-#mainNav { 
-  grid-area: nav; 
+#mainComponents { 
+  grid-area: components; 
   }
 #siteAds { 
   grid-area: ads; 
   } 
-
+/* Stack the layout on small devices/viewports. */
 @media all and (max-width: 575px) {
   body { 
     grid-template-areas: 
       "header"
       "article"
       "ads"
-      "nav"
+      "components"
       "footer";
     grid-template-rows: 80px 1fr 70px 1fr 70px;  
     grid-template-columns: 1fr;
@@ -66,12 +66,17 @@ header, footer, article, nav, div {
 }
 </style>
 <body>
-  <header id="pageHeader">Hello World! Welcome to my single page site about Guitar!</header>
-  <article id="mainArticle">Components of Guitar</article>
-  <nav id="mainNav">Body Styles of Guitar</nav>
-  <div id="siteAds">Fun Facts about Guitar</div>
-  <footer id="pageFooter">Contact me for any further questions or Ideas: aodhan@aodhan.design</footer>
+  <header id="pageHeader">Hello World! This site will provide you with a brief description about the guitar and its components and body styles.</header>
+  <article id="mainArticle">Body styles of the Guitar: <p> Classical Guitars </p>
+    <p>Dreadnought</p>
+    <p>Parlor</p>
+    <p>Concert</p>
+    <p>Auditorium And Grand Auditorium</p>
+    <p>Jumbo </p>
+<p>Mini/Travel</p> </article>
+  <nav id="mainComponents">The Components of Guitar:
+    <img src="The-Parts-of-an-Acoustic-Guitar.jpg">
+  </nav>
+  <div id="siteAds">Ads</div>
+  <footer id="pageFooter">Footer</footer>
 </body>
- 
-</body>
-</html>
